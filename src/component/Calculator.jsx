@@ -16,6 +16,10 @@ const Calculator = () => {
 
   const handleCalculate = () => {
     try {
+      if (!input.trim()) {
+        setOutput("");
+        return;
+      }
       const result = eval(input);
       setOutput(result);
     } catch (error) {
