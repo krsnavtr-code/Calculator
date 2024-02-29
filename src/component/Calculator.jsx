@@ -17,7 +17,7 @@ const Calculator = () => {
   const handleCalculate = () => {
     try {
       if (!input.trim()) {
-        setOutput("");
+        setOutput("Error: Incomplete Expression");
         return;
       }
       const result = eval(input);
